@@ -11,8 +11,10 @@ COPY . /app
 # 将/etc/localtime链接到上海时区文件
 RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
+RUN chmod +r /app/requirements.txt
 # 安装依赖文件
-RUN pip3 install -r requirement.txt
+RUN pip install --upgrade pip
+RUN pip install -r requirement.txt
 
 EXPOSE 8085
 

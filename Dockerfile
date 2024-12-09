@@ -14,5 +14,7 @@ RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 # 安装依赖文件
 RUN pip3 install -r requirement.txt
 
+EXPOSE 8085
+
 # 启动文件服务
 ENTRYPOINT ["python3","main.py"]

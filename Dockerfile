@@ -12,9 +12,9 @@ COPY . /app
 RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
 RUN chmod +r /app/requirements.txt
+
 # 安装依赖文件
-RUN pip install --upgrade pip
-RUN pip install -r requirements.txt
+RUN pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
 
 EXPOSE 8085
 
